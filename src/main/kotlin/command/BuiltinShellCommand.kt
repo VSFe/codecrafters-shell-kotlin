@@ -1,11 +1,12 @@
 package command
 
-enum class ShellCommand(
+enum class BuiltinShellCommand(
     val command: String,
     val execution: (List<String>) -> Unit
 ) {
     EXIT("exit", ::runExit),
-    ECHO("echo", ::runEcho)
+    ECHO("echo", ::runEcho),
+    TYPE("type", ::runType)
 
     ;
 

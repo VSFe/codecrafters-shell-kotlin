@@ -1,8 +1,8 @@
-import command.ShellCommand
+import command.BuiltinShellCommand
 
 fun runQuery(command: String) {
     val commandList = command.split(' ')
     val mainCommand = commandList.first().lowercase()
 
-    ShellCommand.run(mainCommand, commandList.drop(1))
+    BuiltinShellCommand.run(mainCommand, commandList.drop(1))
 }
