@@ -4,7 +4,10 @@ enum class ShellCommand(
     val command: String,
     val execution: (List<String>) -> Unit
 ) {
-    EXIT("exit", ::runExit);
+    EXIT("exit", ::runExit),
+    ECHO("echo", ::runEcho)
+
+    ;
 
     companion object {
         fun run(mainCommand: String, args: List<String>) {
