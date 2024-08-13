@@ -13,7 +13,7 @@ fun runType(args: List<String>) {
     } ?: println("${args[0]}: not found")
 }
 
-private fun resolvePath(arg: String): String? {
+fun resolvePath(arg: String): String? {
     return System.getenv("PATH")
         ?.split(":")
         ?.map { File(it, arg) }
