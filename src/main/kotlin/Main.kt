@@ -1,4 +1,8 @@
 fun main() {
     print("$ ")
-    readln()
+
+    while (true) {
+        val command = readln().trim()
+        runQuery(command)
+    }
 }
