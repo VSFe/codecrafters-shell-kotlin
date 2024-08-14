@@ -6,7 +6,8 @@ enum class BuiltinShellCommand(
 ) {
     EXIT("exit", ::runExit),
     ECHO("echo", ::runEcho),
-    TYPE("type", ::runType)
+    TYPE("type", ::runType),
+    PWD("pwd", ::runPwd)
 
     ;
 
